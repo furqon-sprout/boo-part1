@@ -1,0 +1,73 @@
+<!-- filepath: /Users/furqon/Developments/boo/server/views/create_profile.ejs -->
+<%- include('partials/prologue.ejs', {title: 'Create New Profile | Boo Personality Database', description: 'Create a new personality profile in the Soulverse database.'}) %>
+
+                <div class="row sqs-row">
+                  <%- include('partials/categories.ejs') %>
+                  <div class="col sqs-col-10 sqs-col-page">
+                    <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-create-header">
+                      <div class="sqs-block-content">
+                        <h2 class="name"><span style="color: #4edcd8; font-weight: bold">Create New Profile</span></h2>
+                      </div>
+                    </div>
+
+                    <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-create-form">
+                      <div class="sqs-block-content">
+                        <form method="POST" action="/profiles">
+                          <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" required></textarea>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="mbti">MBTI</label>
+                            <input type="text" id="mbti" name="mbti" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="enneagram">Enneagram</label>
+                            <input type="text" id="enneagram" name="enneagram" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="variant">Instinctual Variant</label>
+                            <input type="text" id="variant" name="variant" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="tritype">Tritype</label>
+                            <input type="number" id="tritype" name="tritype" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="socionics">Socionics</label>
+                            <input type="text" id="socionics" name="socionics" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="sloan">Big 5 Sloan</label>
+                            <input type="text" id="sloan" name="sloan" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="psyche">Attitudinal Psyche</label>
+                            <input type="text" id="psyche" name="psyche" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="image">Image URL</label>
+                            <input type="url" id="image" name="image" required>
+                          </div>
+
+                          <button type="submit" class="btn-submit">Create Profile</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<%- include('partials/epilogue.ejs') %>
